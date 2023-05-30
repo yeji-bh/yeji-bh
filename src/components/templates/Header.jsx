@@ -1,9 +1,8 @@
 import React from "react";
 import {
   Navbar,
-  MobileNav,
+  Collapse,
   Typography,
-  Button,
   IconButton
 } from "@material-tailwind/react";
 import LOGO from '../../assets/logo.png'
@@ -87,9 +86,9 @@ const Header = () => {
           </IconButton>
         </div>
       </div>
-      <MobileNav open={openNav}>
+      <Collapse open={openNav}>
         {navList}
-      </MobileNav>
+      </Collapse>
     </Navbar>
   );
 }

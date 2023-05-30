@@ -1,24 +1,31 @@
-import React from 'react'
+import React, { lazy, Suspense } from 'react'
 import ReactDOM from 'react-dom/client'
 import {
-  createHashRouter,
-  RouterProvider,
+  Routes,
+  Route,
+  HashRouter
 } from "react-router-dom";
 import { ThemeProvider } from "@material-tailwind/react";
-import Home from './routes/Home.jsx';
 import './index.css'
 
-const router = createHashRouter([
-  {
-    path: "/",
-    element: <Home />,
-  },
-]);
+const Home = lazy(() => import('./routes/Home'))
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <ThemeProvider>
-      <RouterProvider router={router} />
+      <HashRouter>
+        <Routes>
+          <Route
+            index
+            element={
+              <Suspense fallback={<>loading...</>}>
+                <Home />
+              </Suspense>
+            }
+          />
+          <Route path="*" element={<div />} />
+        </Routes>
+      </HashRouter>
     </ThemeProvider>
   </React.StrictMode>,
 )
