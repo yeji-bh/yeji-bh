@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
   Navbar,
   Collapse,
@@ -25,9 +26,7 @@ const Header = () => {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="/" className="flex items-center">
-          买专 Q&A
-        </a>
+        <Link to="/">买专 Q&A</Link>
       </Typography>
       <Typography
         as="li"
@@ -35,9 +34,7 @@ const Header = () => {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="/videos" className="flex items-center">
-          安利视频
-        </a>
+        <Link to="/videos">安利视频</Link>
       </Typography>
       <Typography
         as="li"
@@ -45,9 +42,7 @@ const Header = () => {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="/" className="flex items-center">
-          数据/实绩
-        </a>
+        <Link to="/">数据/实绩</Link>
       </Typography>
       <Typography
         as="li"
@@ -65,9 +60,7 @@ const Header = () => {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="/" className="flex items-center">
-          站子整理
-        </a>
+        <Link to="/">站子整理</Link>
       </Typography>
     </ul>
   );
