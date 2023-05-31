@@ -26,7 +26,47 @@ const Header = () => {
         className="p-1 font-normal"
       >
         <a href="#" className="flex items-center">
-          Home
+          买专 Q&A
+        </a>
+      </Typography>
+      <Typography
+        as="li"
+        variant="h6"
+        color="blue-gray"
+        className="p-1 font-normal"
+      >
+        <a href="/#/videos" className="flex items-center">
+          安利视频
+        </a>
+      </Typography>
+      <Typography
+        as="li"
+        variant="h6"
+        color="blue-gray"
+        className="p-1 font-normal"
+      >
+        <a href="#" className="flex items-center">
+          数据/实绩
+        </a>
+      </Typography>
+      <Typography
+        as="li"
+        variant="h6"
+        color="blue-gray"
+        className="p-1 font-normal"
+      >
+        <a href="https://blackheart-hyj.notion.site/blackheart-hyj/60707e3e27024614807d7b97145b89bf" className="flex items-center" target="_blank">
+          考古必看
+        </a>
+      </Typography>
+      <Typography
+        as="li"
+        variant="h6"
+        color="blue-gray"
+        className="p-1 font-normal"
+      >
+        <a href="#" className="flex items-center">
+          站子整理
         </a>
       </Typography>
     </ul>

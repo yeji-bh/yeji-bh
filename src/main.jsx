@@ -9,6 +9,7 @@ import { ThemeProvider } from "@material-tailwind/react";
 import './index.css'
 
 const Home = lazy(() => import('./routes/Home'))
+const Videos = lazy(() => import('./routes/Videos'))
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -23,7 +24,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
               </Suspense>
             }
           />
-          <Route path="*" element={<div />} />
+          <Route path="*" element={<Home />} />
+          <Route path="/videos" element={<Videos />} />
         </Routes>
       </HashRouter>
     </ThemeProvider>
