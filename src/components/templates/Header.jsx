@@ -25,7 +25,7 @@ const Header = () => {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="#" className="flex items-center">
+        <a href="/" className="flex items-center">
           买专 Q&A
         </a>
       </Typography>
@@ -35,7 +35,7 @@ const Header = () => {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="/#/videos" className="flex items-center">
+        <a href="/videos" className="flex items-center">
           安利视频
         </a>
       </Typography>
@@ -45,7 +45,7 @@ const Header = () => {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="#" className="flex items-center">
+        <a href="/" className="flex items-center">
           数据/实绩
         </a>
       </Typography>
@@ -65,7 +65,7 @@ const Header = () => {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="#" className="flex items-center">
+        <a href="/" className="flex items-center">
           站子整理
         </a>
       </Typography>

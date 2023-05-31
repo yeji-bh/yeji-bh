@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client'
 import {
   Routes,
   Route,
-  HashRouter
+  BrowserRouter
 } from "react-router-dom";
 import { ThemeProvider } from "@material-tailwind/react";
 import './index.css'
@@ -14,12 +14,12 @@ const Videos = lazy(() => import('./routes/Videos'))
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <ThemeProvider>
-      <HashRouter>
+      <BrowserRouter>
         <Routes>
           <Route
-            index
+            path='/'
             element={
-              <Suspense fallback={<>loading...</>}>
+              <Suspense fallback={<>努力加载中...</>}>
                 <Home />
               </Suspense>
             }
@@ -27,7 +27,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Route path="*" element={<Home />} />
           <Route path="/videos" element={<Videos />} />
         </Routes>
-      </HashRouter>
+      </BrowserRouter>
     </ThemeProvider>
   </React.StrictMode>,
 )
