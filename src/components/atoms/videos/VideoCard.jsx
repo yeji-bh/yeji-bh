@@ -4,12 +4,13 @@ import {
   CardBody,
   Typography,
 } from "@material-tailwind/react";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const VideoCard = ({ name, cover, url }) => {
   return (
     <Card className="w-fit mx-3 rounded-none mb-4 cursor-pointer" onClick={() => window.open(url, '_blank')}>
       <CardBody className="p-0 select-none" style={{ width: 210, height: 190 }}>
-        <img
+        <LazyLoadImage
           style={{ width: 210, height: 120 }}
           src={cover}
           alt={name}

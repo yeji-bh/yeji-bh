@@ -6,6 +6,7 @@ import {
   Typography,
   IconButton
 } from "@material-tailwind/react";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import LOGO from '../../assets/logo.png'
 
 const MENUS = [
@@ -70,7 +71,11 @@ const Header = () => {
     <Navbar className="sticky inset-0 z-10 h-max max-w-full rounded-none py-2 px-4 lg:px-8 lg:py-4">
       <div className="flex items-center justify-between text-blue-gray-900">
         <div className="flex flex-row items-center select-none">
-          <img src={LOGO} className="w-8 h-8 mr-3" />
+          <LazyLoadImage
+            alt="logo"
+            className="w-8 h-8 mr-3"
+            src={LOGO}
+          />
           <Typography
             as="a"
             href="#"
