@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import {
   Navbar,
@@ -8,60 +8,61 @@ import {
 } from "@material-tailwind/react";
 import LOGO from '../../assets/logo.png'
 
-const Header = () => {
-  const [openNav, setOpenNav] = React.useState(false);
+const MENUS = [
+  { path: '/', name: '买专 Q&A' },
+  { path: '/videos', name: '安利视频' },
+  { path: '/', name: '数据/实绩' },
+  { path: 'https://blackheart-hyj.notion.site/blackheart-hyj/60707e3e27024614807d7b97145b89bf', name: '考古必看' },
+  { path: '/', name: '站子整理' },
+]
 
-  React.useEffect(() => {
-    window.addEventListener(
-      "resize",
-      () => window.innerWidth >= 960 && setOpenNav(false)
-    );
+const Header = () => {
+  const navRef = useRef(null);
+  const [openNav, setOpenNav] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 960) {
+        setOpenNav(false);
+      }
+    };
+
+    const handleClickOutside = (event) => {
+      if (navRef.current && !navRef.current.contains(event.target)) {
+        setOpenNav(false);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
   }, []);
 
   const navList = (
-    <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
-      <Typography
-        as="li"
-        variant="h6"
-        color="blue-gray"
-        className="p-1 font-normal"
-      >
-        <Link to="/">买专 Q&A</Link>
-      </Typography>
-      <Typography
-        as="li"
-        variant="h6"
-        color="blue-gray"
-        className="p-1 font-normal"
-      >
-        <Link to="/videos">安利视频</Link>
-      </Typography>
-      <Typography
-        as="li"
-        variant="h6"
-        color="blue-gray"
-        className="p-1 font-normal"
-      >
-        <Link to="/">数据/实绩</Link>
-      </Typography>
-      <Typography
-        as="li"
-        variant="h6"
-        color="blue-gray"
-        className="p-1 font-normal"
-      >
-        <a href="https://blackheart-hyj.notion.site/blackheart-hyj/60707e3e27024614807d7b97145b89bf" className="flex items-center" target="_blank">
-          考古必看
-        </a>
-      </Typography>
-      <Typography
-        as="li"
-        variant="h6"
-        color="blue-gray"
-        className="p-1 font-normal"
-      >
-        <Link to="/">站子整理</Link>
-      </Typography>
+    <ul ref={navRef} className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
+      {MENUS.map(item => (
+        <Typography
+          key={item.name}
+          as="li"
+          variant="h6"
+          color="blue-gray"
+          className="p-1 font-normal"
+        >
+          {
+            item.path.includes('http')
+              ? (
+                <a href={item.path} className="flex items-center" target="_blank">
+                  {item.name}
+                </a>
+              )
+              : <Link to={item.path}>{item.name}</Link>
+          }
+        </Typography>
+      ))}
     </ul>
   );
 

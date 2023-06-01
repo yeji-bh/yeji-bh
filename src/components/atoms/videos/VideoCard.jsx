@@ -8,9 +8,9 @@ import {
 const VideoCard = ({ name, cover, url }) => {
   return (
     <Card className="w-fit mx-3 rounded-none mb-4 cursor-pointer" onClick={() => window.open(url, '_blank')}>
-      <CardBody className="p-0" style={{ width: 220, height: 200 }}>
+      <CardBody className="p-0 select-none" style={{ width: 210, height: 190 }}>
         <img
-          style={{ width: 220, height: 124 }}
+          style={{ width: 210, height: 120 }}
           src={cover}
           alt={name}
         />
