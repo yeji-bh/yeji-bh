@@ -12,10 +12,12 @@ import './index.css'
 
 const Home = lazy(() => import('./routes/Home'))
 const Videos = lazy(() => import('./routes/Videos'))
+const NotFound = lazy(() => import('./components/pages/404'))
 
 const routesFromElements = createRoutesFromElements(
   <Route element={<ContentLayout />}>
     <Route index element={<Home />} />
+    <Route path="*" element={<NotFound />} />
     <Route path="videos" element={<Videos />} />
   </Route>
 )

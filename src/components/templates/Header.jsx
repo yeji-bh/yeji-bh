@@ -11,10 +11,11 @@ import LOGO from '../../assets/logo.png'
 
 const MENUS = [
   { path: '/', name: '买专 Q&A' },
+  { path: '/special', name: '特典汇总' },
   { path: '/videos', name: '安利视频' },
-  { path: '/', name: '数据/实绩' },
+  { path: '/data', name: '数据/实绩' },
+  { path: '/fansite', name: '站子整理' },
   { path: 'https://blackheart-hyj.notion.site/blackheart-hyj/60707e3e27024614807d7b97145b89bf', name: '考古必看' },
-  { path: '/', name: '站子整理' },
 ]
 
 const Header = () => {

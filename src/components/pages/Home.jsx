@@ -67,7 +67,6 @@ const Home = () => {
                 <Typography
                   as="span"
                   variant="small"
-                  color="gray"
                   className="font-normal text-gray-600"
                 >
                   未拆专，包含专辑所有配置。下单时即包括专辑本身费用和国际邮费，由平台直接发货，从韩国直邮。专辑全新不会拆开，且站子不经手。
@@ -92,7 +91,6 @@ const Home = () => {
                 <Typography
                   as="span"
                   variant="small"
-                  color="gray"
                   className="font-normal text-gray-600"
                 >
                   又称不运回专，仅包含专辑中部分配置，专辑中较为重的东西（比如 PB 和 CD）不运回节省运费。可以获得专辑中小卡，经由站子发货。
@@ -109,7 +107,6 @@ const Home = () => {
           <Typography
             as="span"
             variant="small"
-            color="gray"
             className="font-normal text-gray-600"
           >
             <b>该如何抉择裸专和拆卡专？</b><br />
@@ -126,7 +123,6 @@ const Home = () => {
           <Typography
             as="span"
             variant="small"
-            color="gray"
             className="font-normal text-gray-600 my-3"
           >
             平台为了刺激销量，会在裸专的基础上每张专辑额外赠送购买者一张小卡，常见平台有 JYP, SW, WM, K4...等。不同平台不同批次会有不同的特典。
@@ -134,7 +130,6 @@ const Home = () => {
           <Typography
             as="span"
             variant="small"
-            color="gray"
             className="font-normal text-gray-600 mt-3"
           >
             平台特典购买方式请关注 <a href="https://weibo.com/n/%E9%BB%84%E7%A4%BC%E5%BF%97_OasisForYEJI" className=" text-blue-500" target="_blank">@黄礼志_OasisForYEJI</a>，
@@ -168,7 +163,6 @@ const Home = () => {
           <Typography
             as="span"
             variant="small"
-            color="gray"
             className="font-normal text-gray-600 my-3"
           >
             拼国际邮费是几个<b>所在地区相近的人</b>在购买专辑时为了节省国际邮费，车主在一个平台下单数本后寄到自己手上，专辑到手后再分别寄给车员。
@@ -176,7 +170,6 @@ const Home = () => {
           <Typography
             as="span"
             variant="small"
-            color="gray"
             className="font-normal text-gray-600"
           >
             举个🌰：柴郡猫回归预售期间，荷兰猪和她的五个朋友们每人购买一本专辑，所以荷兰猪在K4购买普版专辑 6 本，邮费总和为 56 元，荷兰猪和她的朋友们分摊后每人国际邮费只需付 9.33 元，朋友们后续再向荷兰猪支付国内邮费即可。
@@ -192,7 +185,6 @@ const Home = () => {
           <Typography
             as="span"
             variant="small"
-            color="gray"
             className="font-normal text-gray-600"
           >
             拼特典卡是在平台特典购买五张凑一套五个成员的特典卡时，为了百分百获得礼志的特典卡，和需要其他成员的卡的车员进行拼车，车主拿到专辑后需要将特典卡和专辑一起寄给车员。
@@ -208,7 +200,6 @@ const Home = () => {
           <Typography
             as="span"
             variant="small"
-            color="gray"
             className="my-3 font-normal text-gray-600"
           >
             不建议上队友粉的车的原因：
@@ -229,13 +220,21 @@ const Home = () => {
           <Typography
             as="span"
             variant="small"
-            color="gray"
             className="font-normal text-gray-600 mb-3"
           >
             柴郡猫回归预售期间，荷兰猪和四个朋友在YETIMALL拼车购买了MP特典，每本 62 元，五本凑套，国际邮费为 45 元，志位调价 1.1，所以荷兰猪需要支付的专辑费用（包含国际邮费）为
             <div className="flex gap-2 mt-3">
               <Chip color="blue" value="(62 * 5 + 45) / 5 * 1.1 = 78.1" />
             </div>
+          </Typography>
+          <Typography
+            as="span"
+            variant="small"
+            className="font-bold mb-3"
+          >
+            *有的人不调邮费而是直接平摊，看不懂的话可以到{' '}
+            <a href="https://weibo.com/p/100808b168d6138145713a69ef415bcd91eb72" target="_blank" className="text-blue-500">ITZY中转站</a>{' '}
+            超话抄作业。
           </Typography>
         </AccordionBody>
       </Accordion>
@@ -247,7 +246,6 @@ const Home = () => {
           <Typography
             as="span"
             variant="small"
-            color="gray"
             className="font-normal text-gray-600 my-3"
           >
             开车需要比较多的时间，跟进物流、给车员打包、录开箱视频...等。
@@ -262,7 +260,6 @@ const Home = () => {
           <Typography
             as="span"
             variant="small"
-            color="gray"
             className="font-normal text-gray-600 my-3"
           >
             进入答疑群，群里有眉粉可以帮忙没时间的眉粉开车（车员需要你自己找），同担比队友粉更加靠谱。
@@ -277,7 +274,6 @@ const Home = () => {
           <Typography
             as="span"
             variant="small"
-            color="gray"
             className="font-normal text-gray-600 my-3"
           >
             拼车信息建议发在微博超话：<a href="https://weibo.com/p/100808b168d6138145713a69ef415bcd91eb72/super_index" target="_blank" className=" text-blue-500">ITZY中转站</a>，或者小红书也可以。
