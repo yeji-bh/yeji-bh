@@ -1,1 +1,0 @@
-import{j as e}from"./index-12f17620.js";const l=({data:r,Element:t})=>e.jsx("div",{className:"w-full flex flex-row flex-wrap justify-center",style:{maxWidth:1e3},children:r.map(s=>e.jsx(t,{...s},s.id))});export{l as L};
