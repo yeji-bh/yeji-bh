@@ -18,7 +18,7 @@ const Carousel = ({ images }) => {
 
   return (
     <>
-      <Gallery photos={images} onClick={openLightbox} />
+      <Gallery direction="column" photos={images} onClick={openLightbox} />
       <ModalGateway>
         {viewerIsOpen ? (
           <Modal onClose={closeLightbox}>

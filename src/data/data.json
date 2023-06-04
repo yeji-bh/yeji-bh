@@ -131,13 +131,15 @@
       "src": "/data/worldtour_1.jpg",
       "width": 3000,
       "height": 4000
-    },{
+    },
+    {
       "id": 19,
       "name": "世巡數據 - 抖音高播放高讚合集",
       "src": "/data/worldtour_2.jpg",
       "width": 1000,
       "height": 1400
-    },{
+    },
+    {
       "id": 20,
       "name": "世巡數據 - 其他合集",
       "src": "/data/worldtour_3.jpg",
@@ -152,18 +154,57 @@
       "src": "/data/river_1.png",
       "width": 1300,
       "height": 500
-    },{
-      "id": 22,
-      "name": "River 封面",
-      "src": "/data/river_2.png",
-      "width": 2000,
-      "height": 1300
-    },{
+    },
+    {
       "id": 23,
-      "name": "River 5000w播放量",
+      "name": "River 封面",
       "src": "/data/river_3.png",
-      "width": 2400,
-      "height": 1300
+      "width": 603,
+      "height": 337
+    },
+    {
+      "id": 24,
+      "name": "River 5000w播放量獎牌",
+      "src": "/data/river_4.png",
+      "width": 272,
+      "height": 364
+    },
+    {
+      "id": 25,
+      "name": "River 5000w播放量獎牌自拍~",
+      "src": "/data/river_5.png",
+      "width": 261,
+      "height": 364
+    }
+  ],
+  "sales": [
+    {
+      "id": 26,
+      "name": "CHESHIRE 回归中输纪录",
+      "src": "/data/sales_1.jpg",
+      "width": 1000,
+      "height": 1000
+    },
+    {
+      "id": 27,
+      "name": "CHESHIRE 一个月中输涨幅趋势图",
+      "src": "/data/sales_2.png",
+      "width": 900,
+      "height": 843
+    },
+    {
+      "id": 28,
+      "name": "CHECKMATE 中输首周数据",
+      "src": "/data/sales_3.png",
+      "width": 1330,
+      "height": 990
+    },
+    {
+      "id": 29,
+      "name": "CHECKMATE 官网签专库存",
+      "src": "/data/sales_4.png",
+      "width": 1466,
+      "height": 596
     }
   ]
 }

@@ -67,7 +67,7 @@ const data = [
       </Typography>
     </div>,
   }, {
-    label: "搜索量",
+    label: "搜索",
     value: "searches",
     body: <div>
       <Alert className="mb-3" color="red" variant="ghost">
@@ -150,6 +150,20 @@ const data = [
         </li>
       </ul>
       <Carousel images={AllData.river} />
+      <Typography className="text-sm mt-3">
+        (可点击图片放大)
+      </Typography>
+    </div>,
+  }, {
+    label: "中输",
+    value: "sales",
+    body: <div>
+      <Alert className="mb-3" color="red" variant="ghost">
+        <Typography className="text-md font-bold">
+          近两次回归 CHECKMATE、CHESHIRE 中输纪录
+        </Typography>
+      </Alert>
+      <Carousel images={AllData.sales} />
       <Typography className="text-sm mt-3">
         (可点击图片放大)
       </Typography>

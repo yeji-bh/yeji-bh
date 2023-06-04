@@ -29,11 +29,11 @@ const routesFromElements = createRoutesFromElements(
 const router = createHashRouter(routesFromElements)
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+  <React.Fragment>
     <ThemeProvider>
       <Suspense fallback={<div>Loading...</div>}>
         <RouterProvider router={router} />
       </Suspense>
     </ThemeProvider>
-  </React.StrictMode>,
+  </React.Fragment>,
 )

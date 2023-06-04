@@ -11,7 +11,7 @@ const FanSite = () => {
         仅整理只发黄礼志且近期还有在更新的。
       </Typography>
       {Object.keys(FanSiteData).map(platform => (
-        <div className="mt-5">
+        <div className="mt-5" key={platform}>
           <Typography variant="h4" style={{ textAlign: 'center' }}>{platform}</Typography>
           <div className="mt-5 flex justify-center">
             <List data={FanSiteData[platform]} Element={FanSiteCard} />
