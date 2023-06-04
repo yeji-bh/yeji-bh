@@ -10,17 +10,19 @@ import { ThemeProvider } from "@material-tailwind/react";
 import ContentLayout from './components/layouts/CotentLayout';
 import './index.css'
 
-const Home = lazy(() => import('./routes/Home'))
-const Videos = lazy(() => import('./routes/Videos'))
-const FanSite = lazy(() => import('./routes/FanSite'))
-const NotFound = lazy(() => import('./components/pages/404'))
+const HomePage = lazy(() => import('./routes/Home'))
+const VideosPage = lazy(() => import('./routes/Videos'))
+const FanSitePage = lazy(() => import('./routes/FanSite'))
+const DataPage = lazy(() => import('./routes/Data'))
+const NotFoundPage = lazy(() => import('./components/pages/404'))
 
 const routesFromElements = createRoutesFromElements(
   <Route element={<ContentLayout />}>
-    <Route index element={<Home />} />
-    <Route path="*" element={<NotFound />} />
-    <Route path="videos" element={<Videos />} />
-    <Route path="fansite" element={<FanSite />} />
+    <Route index element={<HomePage />} />
+    <Route path="*" element={<NotFoundPage />} />
+    <Route path="videos" element={<VideosPage />} />
+    <Route path="fansite" element={<FanSitePage />} />
+    <Route path="data" element={<DataPage />} />
   </Route>
 )
 

@@ -5,3 +5,8 @@
 .font-sans {
   font-family: "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
 }
+
+.react-images__view-image--isModal {
+  display: inline-block;
+  left: 50%;
+}
