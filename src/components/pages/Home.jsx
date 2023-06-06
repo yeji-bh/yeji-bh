@@ -12,9 +12,11 @@ import {
   Typography,
   Chip
 } from "@material-tailwind/react"
+import CarouselBase, { Modal, ModalGateway } from "react-images";
 
 const Home = () => {
   const [open, setOpen] = useState(0);
+  const [viewerIsOpen, setViewerIsOpen] = useState(false);
 
   const handleOpen = (value) => {
     setOpen(open === value ? 0 : value);
@@ -27,6 +29,12 @@ const Home = () => {
 
   return (
     <div className="mx-auto max-w-screen-md p-12">
+      <div className="mb-5 cursor-pointer" onClick={() => setViewerIsOpen(true)}>
+        <img src="home/qna_1.png" />
+        <Typography className="text-sm text-center mt-3">
+          (懒人版，可点击图片放大)
+        </Typography>
+      </div>
       <Typography as="span" variant="h4">买专 Q&A</Typography>
       <Accordion open={open === 1} animate={customAnimation}>
         <AccordionHeader className="text-base" onClick={() => handleOpen(1)}>
@@ -111,7 +119,7 @@ const Home = () => {
           >
             <b>该如何抉择裸专和拆卡专？</b><br />
             想要快点拿到专不介意国际邮费的话建议选择裸专直邮<br />
-            不想要太多配置、介意国际邮费且不介意什么时候拿到小卡的话建议选择拆卡专
+            嫌专辑体积大占空间、只想要小卡的话建议选择拆卡专
           </Typography>
         </AccordionBody>
       </Accordion>
@@ -296,6 +304,45 @@ const Home = () => {
           单数限制是为了防止集货，所以每个身分证号买的专辑数有限制，如果已经用自己的身分证号下单次数达到限制，需要换身分证号下单，如果不换身分证号依然可以购买，只是发货会很慢。
         </AccordionBody>
       </Accordion>
+      <Accordion open={open === 14} animate={customAnimation}>
+        <AccordionHeader className="text-base" onClick={() => handleOpen(14)}>
+          14. n随1、凑套是什么意思？
+        </AccordionHeader>
+        <AccordionBody className="text-sm">
+          n随1就是买一张专随机送一名成员的卡，买两张随机送两人，买五张就能凑一套卡（ITZY 五个人）。
+        </AccordionBody>
+      </Accordion>
+      <Accordion open={open === 15} animate={customAnimation}>
+        <AccordionHeader className="text-base" onClick={() => handleOpen(15)}>
+          15. 专辑多久发货？应该寄哪里？
+        </AccordionHeader>
+        <AccordionBody className="text-sm">
+          通常来说专辑在回归当天就会发货，或者第二天会陆续安排出库，K4 物流较快，希望快一点拿到专辑的话建议选 K4。
+        </AccordionBody>
+      </Accordion>
+      <Accordion open={open === 16} animate={customAnimation}>
+        <AccordionHeader className="text-base" onClick={() => handleOpen(16)}>
+          16. 买什么专需要补邮？怎么知道什么时候该补邮？
+        </AccordionHeader>
+        <AccordionBody className="text-sm">
+          只有 拆卡专 或者 站子的自制特典 这种经过站子手中的才会需要补邮，补邮信息请关注志首或者{' '}
+          <a href="https://weibo.com/u/5401448120" target="_blank" className=" text-blue-500">@志首小助理</a>{' '}
+          会提醒补邮。
+        </AccordionBody>
+      </Accordion>
+      <ModalGateway>
+        {viewerIsOpen ? (
+          <Modal onClose={() => setViewerIsOpen(false)}>
+            <CarouselBase
+              currentIndex={0}
+              views={[{
+                src: "home/qna_1.png",
+                caption: "志首代购博说明"
+              }]}
+            />
+          </Modal>
+        ) : null}
+      </ModalGateway>
     </div>
   )
 }
